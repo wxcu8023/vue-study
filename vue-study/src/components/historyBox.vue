@@ -1,20 +1,24 @@
 <template>
-    <div class="buttonS1">
-        <button v-on:click="sz(showTxt)" v-text="showTxt"></button>
+    <div class="historyBox">
+        <ul>
+            <li v-bind:for="hisList in hisLists">
+                {{hisList.text}}
+            </li>
+        </ul>
     </div>
 </template>
 <script>
 export default {
-    name: 'showTxt',
+    name: 'historyBox',
+    data() {
+        return {
+            
+        }
+    },
     props: {
         showTxt: String,
 
     },
-    methods:{
-        sz:function(e){
-            this.$emit("listenToChildEvent",e);
-        }
-    }
 }
 </script>
 <style scoped>
@@ -35,20 +39,20 @@ body {
   overflow-wrap: break-word;
   background:--mainColor;
 }
-.buttonS1{
+.ButtonDiv{
     float: left;
 }
-.buttonS1{
-    width:120px;
-}
-.buttonS1 button{
-  width:100%;
+button{
+  width:60px;
   height:38px;
   line-height:38px;
   text-align:center;
   background-color:var(--btnBColor);
   border:1px solid var(--btnBRcolor);
   font-size:20px;
+}
+.historyBox{
+    float: left;
 }
 button:active{
     background-color:#000

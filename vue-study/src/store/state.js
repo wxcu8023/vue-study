@@ -1,6 +1,6 @@
 export default {
     postState:{
-        result:'',
-        process:''
+        result: '',
+        process: ''
     }
 }

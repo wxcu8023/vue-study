@@ -1,9 +1,8 @@
 import shop from '../../api/process'
-
 const state = {
     postState:{
-        result:'0',
-        process:'0'
+        result: '',
+        process: ''
     }
 }
 
